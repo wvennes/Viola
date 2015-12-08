@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Viola", "GameCode\Viola.vcxproj", "{334C17A5-E6D4-49AB-9948-1AEFE6381188}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "..\..\Engine\Engine.vcxproj", "{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Cook|Win32 = Debug Cook|Win32
+		Debug Inline Cook|Win32 = Debug Inline Cook|Win32
+		Debug Inline|Win32 = Debug Inline|Win32
+		Debug|Win32 = Debug|Win32
+		Release Cook|Win32 = Release Cook|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Cook|Win32.ActiveCfg = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Cook|Win32.Build.0 = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Inline Cook|Win32.ActiveCfg = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Inline Cook|Win32.Build.0 = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Inline|Win32.ActiveCfg = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug Inline|Win32.Build.0 = Debug Inline|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug|Win32.ActiveCfg = Debug|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Debug|Win32.Build.0 = Debug|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Release Cook|Win32.ActiveCfg = Release|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Release Cook|Win32.Build.0 = Release|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Release|Win32.ActiveCfg = Release|Win32
+		{334C17A5-E6D4-49AB-9948-1AEFE6381188}.Release|Win32.Build.0 = Release|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug Cook|Win32.ActiveCfg = Debug Inline|x64
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug Inline Cook|Win32.ActiveCfg = Debug Inline|x64
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug Inline|Win32.ActiveCfg = Debug Inline|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug Inline|Win32.Build.0 = Debug Inline|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Debug|Win32.Build.0 = Debug|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Release Cook|Win32.ActiveCfg = Release|x64
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Release|Win32.ActiveCfg = Release|Win32
+		{D56A6F94-6BD4-4985-B09F-FDCC4B056FB9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

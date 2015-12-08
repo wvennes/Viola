@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Inline|Win32">
+      <Configuration>Debug Inline</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{334C17A5-E6D4-49AB-9948-1AEFE6381188}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Viola</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\..\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Configuration)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug Inline|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /Y /F /I "$(SolutionDir)Temporary\$(ProjectName)_$(PlatformName)_$(Configuration)\$(TargetFileName)" "$(SolutionDir)Run_$(PlatformName)\"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copying $(TargetFileName) to Run_$(PlatformName)</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Agent.cpp" />
+    <ClCompile Include="BaseAIBehavior.cpp" />
+    <ClCompile Include="BaseMapGenerator.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="CellularAutomataMapGenerator.cpp" />
+    <ClCompile Include="ChaseBehavior.cpp" />
+    <ClCompile Include="CombatSystem.cpp" />
+    <ClCompile Include="DataMapGenerator.cpp" />
+    <ClCompile Include="DrainBehavior.cpp" />
+    <ClCompile Include="DungeonGenerator.cpp" />
+    <ClCompile Include="Faction.cpp" />
+    <ClCompile Include="FactionRelationship.cpp" />
+    <ClCompile Include="Feature.cpp" />
+    <ClCompile Include="FeatureFactory.cpp" />
+    <ClCompile Include="FollowBehavior.cpp" />
+    <ClCompile Include="FrightBehavior.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="GraveyardGenerator.cpp" />
+    <ClCompile Include="GuardBehavior.cpp" />
+    <ClCompile Include="HealBehavior.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemFactory.cpp" />
+    <ClCompile Include="LabyrinthGenerator.cpp" />
+    <ClCompile Include="Main_Win32.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MeleeAttackBehavior.cpp" />
+    <ClCompile Include="MessageBar.cpp" />
+    <ClCompile Include="NecromancerLair.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPCFactory.cpp" />
+    <ClCompile Include="PathFinder.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="SpawnNPCBehavior.cpp" />
+    <ClCompile Include="StatusBar.cpp" />
+    <ClCompile Include="TheApplication.cpp" />
+    <ClCompile Include="TheGame.cpp" />
+    <ClCompile Include="WanderBehavior.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Agent.hpp" />
+    <ClInclude Include="BaseAIBehavior.hpp" />
+    <ClInclude Include="BaseMapGenerator.hpp" />
+    <ClInclude Include="Cell.hpp" />
+    <ClInclude Include="CellTypes.hpp" />
+    <ClInclude Include="CellularAutomataMapGenerator.hpp" />
+    <ClInclude Include="ChaseBehavior.hpp" />
+    <ClInclude Include="CombatSystem.hpp" />
+    <ClInclude Include="DataMapGenerator.hpp" />
+    <ClInclude Include="DrainBehavior.hpp" />
+    <ClInclude Include="DungeonGenerator.hpp" />
+    <ClInclude Include="Faction.hpp" />
+    <ClInclude Include="FactionRelationship.hpp" />
+    <ClInclude Include="Feature.hpp" />
+    <ClInclude Include="FeatureFactory.hpp" />
+    <ClInclude Include="FollowBehavior.hpp" />
+    <ClInclude Include="FrightBehavior.hpp" />
+    <ClInclude Include="GameCommon.hpp" />
+    <ClInclude Include="GameEntity.hpp" />
+    <ClInclude Include="GraveyardGenerator.hpp" />
+    <ClInclude Include="GuardBehavior.hpp" />
+    <ClInclude Include="HealBehavior.hpp" />
+    <ClInclude Include="Item.hpp" />
+    <ClInclude Include="ItemFactory.hpp" />
+    <ClInclude Include="LabyrinthGenerator.hpp" />
+    <ClInclude Include="Map.hpp" />
+    <ClInclude Include="MeleeAttackBehavior.hpp" />
+    <ClInclude Include="MessageBar.hpp" />
+    <ClInclude Include="MovementProperties.hpp" />
+    <ClInclude Include="NecromancerLairGenerator.hpp" />
+    <ClInclude Include="NPC.hpp" />
+    <ClInclude Include="NPCFactory.hpp" />
+    <ClInclude Include="PathFinder.hpp" />
+    <ClInclude Include="Player.hpp" />
+    <ClInclude Include="SpawnNPCBehavior.hpp" />
+    <ClInclude Include="StatusBar.hpp" />
+    <ClInclude Include="TheApplication.hpp" />
+    <ClInclude Include="TheGame.hpp" />
+    <ClInclude Include="WanderBehavior.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Run_Win32\Data\Factions\Factions.xml" />
+    <None Include="..\Run_Win32\Data\FeatureFactories\Features.feature.xml" />
+    <None Include="..\Run_Win32\Data\Fonts\BookAntiqua.fnt" />
+    <None Include="..\Run_Win32\Data\Fonts\BookAntiqua_0.png" />
+    <None Include="..\Run_Win32\Data\ItemFactories\Armor.item.xml" />
+    <None Include="..\Run_Win32\Data\ItemFactories\Potion.item.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\Run_Win32\Data\ItemFactories\Weapon.item.xml" />
+    <None Include="..\Run_Win32\Data\Maps\TestMap.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\FireBat.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Cleric.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Gargoyle.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Ghost.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Goblin.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Guard.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Imp.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Necromancer.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Ogre.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Orc.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Skeleton.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\VampireBat.npc.xml" />
+    <None Include="..\Run_Win32\Data\NPCFactories\Zombie.npc.xml" />
+    <None Include="..\Run_Win32\Data\Savedata\save.xml" />
+    <None Include="..\Run_Win32\Data\Shaders\DoNothing_fs.glsl" />
+    <None Include="..\Run_Win32\Data\Shaders\DoNothing_vs.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Engine\Engine.vcxproj">
+      <Project>{d56a6f94-6bd4-4985-b09f-fdcc4b056fb9}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
